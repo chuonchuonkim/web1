@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    display: grid;
+    height: 100vh; /* Sử dụng toàn bộ chiều cao của cửa sổ trình duyệt */
+    grid-template-rows: 10% 90%;
+}
+.top{
+    background-color: rgb(226, 56, 56);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+.text{
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    border-right: 1px solid #686767;
+}
+#bell{
+    font-size: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.announcement{
+    width: 280px;
+    height: 370px;
+    border-radius: 10px;
+    background: rgb(214, 208, 196);
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 30px;
+    text-align: center;
+    display: none;
+}
+.search{
+    height: 30px;
+    width: 235px;
+}
+.exam-item {
+    height: 104px;
+    width: 200px;
+    background-color: rgb(241, 245, 249);
+    box-shadow: 0px 0px 17px 2px rgba(204, 203, 203, 0.8);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+p{
+    padding-top: 22px;
+}
+.exam1{
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.exam{
+    margin-left: 25px;
+}
+#exams-list{
+    margin-top: 20px;
+}
+
+.person {
+    position: relative;
+    left: 50px;
+    display: flex;
+}
+.profile-info {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.person:hover .profile-info {
+    display: block;
+}
+.profile-info {
+    height: 78px;
+    width: 150px;
+    align-items: center;
+}
+.profile-info .acc{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}

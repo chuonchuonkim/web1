@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý danh sách kỳ thi</title>
+<style>
+    /* CSS */
+    /* Style cho form */
+    form {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    select {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    /* Style cho danh sách câu hỏi */
+    .question-list {
+        margin-top: 20px;
+    }
+    .question {
+        margin-bottom: 10px;
+    }
+    .delete-question {
+        color: red;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+</style>
+</head>
+<body>
+<div id="app">
+    <!-- Form nhập thông tin kỳ thi -->
+    <form id="examForm">
+        <label for="examName">Tên kỳ thi:</label>
+        <input type="text" id="examName" required>
+        <label for="examDescription">Mô tả:</label>
+        <input type="text" id="examDescription">
+        <label for="examType">Loại kỳ thi:</label>
+        <select id="examType">
+            <option value="tự do">Tự do</option>
+            <option value="thời gian cụ thể">Thời gian cụ thể</option>
+        </select>
+        <input type="submit" value="Thêm mới kỳ thi">
+    </form>
+
+    <!-- Danh sách câu hỏi -->
+    <div class="question-list">
+        <h2>Danh sách câu hỏi</h2>
+        <div id="questions"></div>
+    </div>
+</div>
+
+<script>
+    // JavaScript
+    const examForm = document.getElementById('examForm');
+    const questionsDiv = document.getElementById('questions');
+
+    // Danh sách các câu hỏi
+    let questions = [];
+
+    // Hàm để hiển thị lại danh sách câu hỏi
+    function renderQuestions() {
+        questionsDiv.innerHTML = '';
+        questions.forEach((question, index) => {
+            const questionElement = document.createElement('div');
+            questionElement.className = 'question';
+            questionElement.innerHTML = `
+                Câu hỏi ${index + 1}: ${question.content}
+                <span class="delete-question" onclick="deleteQuestion(${index})">(Xóa)</span>
+            `;
+            questionsDiv.appendChild(questionElement);
+        });
+    }
+
+    // Hàm thêm mới câu hỏi
+    function addQuestion(content) {
+        questions.push({ content });
+        renderQuestions();
+    }
+
+    // Hàm xóa câu hỏi
+    function deleteQuestion(index) {
+        questions.splice(index, 1);
+        renderQuestions();
+    }
+
+    // Sự kiện submit form thêm mới kỳ thi
+    examForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const examName = document.getElementById('examName').value;
+        const examDescription = document.getElementById('examDescription').value;
+        const examType = document.getElementById('examType').value;
+
+        // Gửi thông tin kỳ thi đi và làm gì đó với nó (ví dụ: lưu vào cơ sở dữ liệu)
+        console.log('Tên kỳ thi:', examName);
+        console.log('Mô tả:', examDescription);
+        console.log('Loại kỳ thi:', examType);
+        console.log('Danh sách câu hỏi:', questions);
+    });
+
+    // Khởi tạo trang web với một câu hỏi mẫu
+    addQuestion('Câu hỏi mẫu?');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thống kê</title>
+    <link rel="stylesheet" href="thongke.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="thongke.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../admin_homepage/home_page.html"><img src="../image/logo_ptit.png" alt="Your Logo" /></a>
+        <i class="fas fa-user"></i>
+    </header>
+    <nav class="nav-menu">
+        <ul>
+          <li><a href="../admin_homepage/home_page.html">Quản lý kỳ thi</a></li>
+          <li><a href="../qlsv/qlsv.html">Quản lý sinh viên</a></li>
+          <li><a href="../thongke/thongke.html">Thống kê</a></li>
+          <li>
+            <a href="../showresult/show_result.html">Xem kết quả</a>
+          </li>
+        </ul>
+    </nav>
+    <div class="content" id="content">
+        <!-- Bảng thống kê tổng hợp -->
+        <div id="summaryTable">
+            <h2 style="display: inline-block;">Bảng thống kê tổng hợp</h2>
+            <!-- Bộ lọc -->
+            <div id="filters" >
+                <label for="examSelect"></label>
+                <select id="examSelect">
+                <option value="all">Tất cả</option>
+                <option value="practice">Luyện tập</option>
+                <option value="midterm1">Giữa kì một</option>
+                <!-- <option value="completed">Đã hoàn thành</option>
+                <option value="incomplete">Chưa hoàn thành</option> -->
+                <!-- Thêm các tùy chọn cho từng kỳ thi từ dữ liệu frontend -->
+            </select>
+            <!-- Thêm các bộ lọc khác nếu cần -->
+            <button id="btn-apply" onclick="applyFilters()">Áp dụng</button>
+            </div>
+            <table id="examSummary">
+                <thead>
+                    <tr>
+                        <th>Tên kỳ thi</th>
+                        <th>Tổng số lần tham gia</th>
+                        <th>Tỷ lệ hoàn thành (%)</th>
+                        <th>Điểm trung bình</th>
+                    </tr>
+                </thead>
+                <tbody id="summaryData">
+                    <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Biểu đồ phân phối điểm số -->
+        <div id="scoreDistributionChart">
+            <h2>Biểu đồ phân phối điểm số</h2>
+            <canvas id="scoreDistributionCanvas" width="400" height="400"></canvas>
+
+        </div>
+        <div id="">
+            <h2 class="">Biểu đồ phân phối tỉ lệ hoàn thành</h2>
+            <canvas id="myPieChart" width="400" height="400"></canvas>
+        </div>
+        <div id="descrition" class="">
+
+        </div>
+        <div class="btn-pdf">
+            <button id="export-pdf" onclick="exportToPDF()" >Xuất  ra PDF</button>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    
+</body>
+</html>

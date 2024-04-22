@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="qlsv.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="../admin_homepage/home_page.html"><img src="../../image/logo_ptit.png" alt="Your Logo" /></a>
+      <i class="fas fa-user"></i>
+    </header>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="../admin_homepage/home_page.html">Quản lý kỳ thi</a></li>
+        <li>
+          <a href="qlsv.html">Quản lý sinh viên</a>
+        </li>
+        <li><a href="../../thongke/thongke.html" onclick="showStatistics()">Thống kê</a></li>
+        <li><a href="../../showresult/show_result.html">Xem kết quả</a></li>
+      </ul>
+    </nav>
+
+    <div class="content" id="manageExamContent" style="display: none">
+      <h2>Thông tin kỳ thi</h2>
+      <form id="examForm">
+        <label for="examName">Tên kỳ thi:</label><br />
+        <input type="text" id="examName" name="examName" /><br />
+        <label for="examDescription">Chọn từ:</label><br />
+        <select id="examDescription" name="examDescription">
+          <!-- Thay đổi từ textarea thành select -->
+          <option value="D20">D20</option>
+          <option value="D21">D21</option>
+          <option value="D22">D22</option>
+          <option value="D23">D23</option></select
+        ><br />
+        <label for="examEndDate">Ngày kết thúc:</label><br />
+        <input type="date" id="examEndDate" name="examEndDate" /><br />
+
+        <h2>Danh sách câu hỏi</h2>
+        <div id="questionList">
+          <!-- Placeholder for question list -->
+        </div>
+        <button type="button" onclick="addQuestion()">Thêm câu hỏi</button>
+        <button type="button" onclick="submitExam()">Lưu kỳ thi</button>
+      </form>
+
+      <h2>Nhập đề thi từ file Excel</h2>
+      <input type="file" id="excelFileInput" />
+      <button onclick="importQuestionsFromExcel()">Nhập từ file Excel</button>
+    </div>
+
+    <div class="content" id="manageStudentsContent" >
+      <h2>Danh sách sinh viên</h2>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Nhập mã sinh viên để tìm kiếm"
+      />
+      <button onclick="searchStudent()">Tìm kiếm</button>
+      <button onclick="showAddStudentForm()">Thêm sinh viên</button>
+      <!-- Form thêm sinh viên -->
+      <div class="form-container" id="addStudentForm">
+        <form id="studentForm">
+          <label for="hoTen">Họ tên:</label><br />
+          <input type="text" id="hoTen" name="hoTen" required /><br />
+          <label for="maSV">Mã sinh viên:</label><br />
+          <input type="text" id="maSV" name="maSV" required /><br />
+          <label for="lop">Lớp:</label><br />
+          <input type="text" id="lop" name="lop" required /><br />
+          <label for="kyThiThamGia">Các kỳ thi tham gia:</label><br />
+          <input type="text" id="kyThiThamGia" name="kyThiThamGia" /><br />
+          <label for="diem">Điểm số:</label><br />
+          <input
+            type="number"
+            id="diem"
+            name="diem"
+            step="0.01"
+            min="0"
+            max="10"
+          /><br />
+          <input type="submit" value="Thêm sinh viên" />
+          <button
+            type="button"
+            class="form-cancel-btn"
+            onclick="hideAddStudentForm()"
+          >
+            Hủy
+          </button>
+        </form>
+      </div>
+
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Mã sinh viên</th>
+            <th>Lớp</th>
+            <th>Các kỳ thi tham gia</th>
+            <th>Điểm số</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dữ liệu sinh viên sẽ được thêm ở đây -->
+        </tbody>
+      </table>
+    </div>
+    <div class="content" id="manageStudentsContent" style="display: none">
+      <!-- Phần quản lý sinh viên -->
+    </div>
+
+    <div class="content" id="statisticsContent" style="display: none">
+      <!-- Phần thống kê -->
+      <h2>Thống kê kết quả sinh viên tham gia kỳ thi</h2>
+      <div id="statisticsTable">
+        <!-- Bảng thống kê tổng hợp kết quả -->
+      </div>
+      <div id="filterOptions">
+        <!-- Các tùy chọn lọc kết quả -->
+      </div>
+      <button onclick="exportToPDF()">Xuất PDF</button>
+      <button onclick="exportToExcel()">Xuất Excel</button>
+    </div>
+    <script src="qlsv.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    display: grid;
+    height: 100vh; /* Sử dụng toàn bộ chiều cao của cửa sổ trình duyệt */
+    grid-template-rows: 10% 90%;
+}
+.nav-menu {
+    background-color: #ddd;
+    width: 200px;
+    padding: 20px;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #ad171c;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu ul li a:hover {
+    background-color: #ccc;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #b92929, #fa6d6d);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;
+  }
+
+  header:hover {
+    background: linear-gradient(to right, #fa6d6d, #b92929);
+  }
+
+  header img {
+    width: 40px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  header i {
+    font-size: 20px;
+  }
+
+.text{
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    border-right: 1px solid #686767;
+}
+
+.search{
+    height: 30px;
+    width: 235px;
+    border-radius: 3px;
+}
+.exam-item {
+    height: 104px;
+    width: 200px;
+    background-color: rgb(241, 245, 249);
+    box-shadow: 0px 0px 17px 2px rgba(204, 203, 203, 0.8);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+p{
+    padding-top: 22px;
+}
+.exam1{
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.exam{
+    top: 20px;
+    width: 80%;
+    right: 0px;
+    height: auto;
+    margin-left: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    padding-top: 100px;
+}
+#exams-list{
+    margin-top: 20px;
+}
+
+.person {
+    position: relative;
+    left: 50px;
+    display: flex;
+}
+.profile-info {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.person:hover .profile-info {
+    display: block;
+}
+.profile-info {
+    height: 78px;
+    width: 150px;
+    align-items: center;
+}
+.profile-info .acc{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: hsl(211, 97%, 49%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

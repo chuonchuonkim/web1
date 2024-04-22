@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="sinhVien_log.css">
+    <link rel="icon" href="../image/logo_ptit.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bor">
+        <div class="img">
+            <img src="..\image\logo_ptit.png" alt="logo" style="width: 55px; height: 70px;">
+        </div>
+        <h3>Đăng nhập</h3>
+        <div class="form">
+            <form action="">
+                <div class="account">
+                    <label for="maSV">Tài khoản</label><br>
+                    <input type="text" class = "login" id="username" name = "maSV" placeholder="Vd: B21DCCN001"><br>
+                </div>
+                <div class="text_danger" id="username_error"></div>
+                <br>
+                <div class="account">
+                    <label for="class" >Mật khẩu</label><br>
+                    <input type="password" class = "login" id="password" name = "class" placeholder="Vd: 12345678"><br>
+                </div>
+                <div class="text_danger" id="password_error"></div>
+            </form>
+        </div>
+        <div class="forget">
+            <a href="" style="text-decoration: none; color: rgb(17, 107, 202);">Quên mật khẩu?</a>
+        </div>
+        <div class="log">
+            <button type="submit" value="Đăng nhập" id="loginButton">Đăng Nhập</button>
+        </div>
+        <div class="sign_up">
+            <a href="../sign_up/sign_up.html" style=" color: black;">Chưa có tài khoản. Đăng kí?</a>
+        </div>
+    </div>
+    <script src="sinhVien_log.js"></script>
+</body>
+</html>

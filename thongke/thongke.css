@@ -1,0 +1,190 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #b92929, #fa6d6d);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;
+  }
+
+  header:hover {
+    background: linear-gradient(to right, #fa6d6d, #b92929);
+  }
+
+  header img {
+    width: 40px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  header i {
+    font-size: 20px;
+  }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin-top: 120px;
+}
+
+.content {
+    width: 80%;
+    right: 0px;
+    margin-top: 0px;
+    margin-left:260px;
+    padding: 20px;
+    margin-right: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    padding-top: 20px;
+}
+
+#summaryTable {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#scoreDistributionChart{
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+@media print{
+    header {
+        display: none;
+    }
+
+    .nav-menu {
+      display: none;
+    }
+    
+    body {
+      width: 100%;
+    }
+
+}
+
+.nav-menu {
+    background-color: #ddd;
+    width: 200px;
+    padding: 20px;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #ad171c;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu ul li a:hover {
+    background-color: #ccc;
+  }
+#scoreDistributionCanvas{
+  max-height: 300px;
+}
+#descrition{
+  margin-bottom: 40px;
+}
+
+#filters {
+  /* width: 100%; */
+  height: 80px;
+  text-align: right;
+}
+#examSelect{
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(240, 12, 12, 0.5);
+  border: 1px solid #000;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 16px;
+}
+#examSelect:hover{
+  background-color:  #fff;
+  color: #000;
+}
+#btn-apply{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(240, 12, 12, 0.5);
+  border: 1px solid #000;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 16px;
+}
+#btn-apply:hover{
+  background-color:  #fff;
+  color: #000;
+}
+.btn-pdf{
+  text-align: right;
+  margin-bottom: 100px;
+}
+#export-pdf{
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+  background-color: rgba(240, 12, 12, 0.5);
+  border: 1px solid #000;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 16px;
+  
+  margin-right: 100px;
+
+}
+
+.footer{
+  background-color: rgba(240, 12, 12, 0.5);
+  width: 100%;
+  height: 80px;
+
+}

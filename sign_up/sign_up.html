@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="sign_up.css">
+    <link rel="icon" href="../image/logo_ptit.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bor">
+        <div class="img">
+            <img src="../image/logo_ptit.png" alt="logo" style="width: 55px; height: 70px;">
+        </div>
+        <h3>Đăng Kí</h3>
+        <div class="form">
+            <form action="">
+                <label for="maSV">Tên người dùng</label><br>
+                <input type="text" class = "login" id="username" name = "maSV" placeholder="Vd: B21DCCN001"><br>
+                <div id="username-error" class="error-message"></div>
+                <br>
+                <label for="maSV">Email</label><br>
+                <input type="email" class="login" id="email" name = "email" placeholder="Vd: 123@gmail.com"><br>
+                <div id="email-error" class="error-message"></div>
+                <br>
+                <label for="class" >Mật khẩu</label><br>
+                <input type="password" class="login" id="password" name = "class" placeholder="Vd: 12345678"><br>
+                <div id="password-error" class="error-message"></div>
+                <br>
+                <label for="class" >Xác nhận mật khẩu</label><br>
+                <input type="password" class="login" id="confirm-password" name = "class" placeholder="Vd: 12345678">
+                <div id="confirm-password-error" class="error-message"></div>
+            </form>
+        </div>
+        <div class="log">
+            <button id="sign_upButton" type="submit" value="Đăng Kí">Đăng Kí</button>
+        </div>
+    </div>
+    <script src="sign_up.js"></script>
+</body>
+</html>

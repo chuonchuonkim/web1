@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="sinhVien_log.css">
+    <link rel="icon" href="../image/logo_ptit.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bor">
+        <div class="img">
+            <img src="..\image\logo_ptit.png" alt="logo" style="width: 55px; height: 70px;">
+        </div>
+        <h3>Đăng nhập</h3>
+        <div class="form">
+            <form action="">
+                <div class="account">
+                    <label for="maSV">Tài khoản</label><br>
+                    <input type="text" class = "login" id="username" name = "maSV" placeholder="Vd: abc@ptit.edu.vn"><br>
+                </div>
+                <div class="text_danger" id="username_error"></div>
+                <br>
+                <div class="account">
+                    <label for="class" >Mật khẩu</label><br>
+                    <input type="password" class = "login" id="password" name = "class" placeholder="Vd: 12345678"><br>
+                </div>
+                <div class="text_danger" id="password_error"></div>
+            </form>
+        </div>
+        <!-- <div class="forget">
+            <a href="" style="text-decoration: none; color: rgb(17, 107, 202);">Quên mật khẩu?</a>
+        </div> -->
+        <div class="log">
+            <button type="submit" value="Đăng nhập" id="loginButton">Đăng Nhập</button>
+        </div>
+        <!-- <div class="sign_up">
+            <a href="sign_up.html" style=" color: black;">Chưa có tài khoản. Đăng kí?</a>
+        </div> -->
+    </div>
+    <script>
+        var usernameInput = document.getElementById("username");
+        var passwordInput = document.getElementById("password");
+        var errorMessageDiv1 = document.getElementById("username_error");
+        var errorMessageDiv2 = document.getElementById("password_error");
+        var usernameValid = false;
+        var passwordValid = false;
+        // Thêm sự kiện onblur cho phần tử input
+        usernameInput.onblur = function() {
+            // Kiểm tra nếu người dùng không nhập username
+            if (usernameInput.value === "") {
+                // Hiển thị thông báo trong div
+                usernameValid = false;
+                errorMessageDiv1.textContent = "Vui lòng nhập tài khoản!";
+            } else {
+                // Nếu đã nhập username, xóa thông báo
+                usernameValid = true;
+                errorMessageDiv1.textContent = "";
+            }
+        };
+        passwordInput.onblur = function(){
+            if (passwordInput.value === ""){
+                passwordValid = false;
+                errorMessageDiv2.textContent = "Vui lòng nhập mật khẩu!"
+            } else {
+                passwordValid = true;
+                // Nếu đã nhập username, xóa thông báo
+                errorMessageDiv2.textContent = "";
+            }
+        }
+        loginButton.onclick = function() {
+            if (!usernameValid || !passwordValid) {
+                // Kiểm tra nếu có bất kỳ trường thông tin nào chưa được nhập
+                alert("Vui lòng điền đầy đủ thông tin!");
+            } else {
+                // Nếu đủ thông tin, hiển thị thông báo đăng nhập thành công và chuyển trang
+                alert("Đăng nhập thành công!");
+                // Chuyển sang trang chính (điều này cần được thay đổi tùy thuộc vào ứng dụng của bạn)
+                window.location.href = "../admin_homepage/home_page.html";
+            }
+        };
+    </script>
+</body>
+</html>

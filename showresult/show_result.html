@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm và Xem kết quả thi</title>
+    <link rel="stylesheet" href="show_result.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+</head>
+<body>
+    <header>
+        <a href="../admin_homepage/home_page.html"><img src="../image/logo_ptit.png" alt="Your Logo" /></a>
+        <i class="fas fa-user"></i>
+    </header>
+    <nav class="nav-menu">
+        <ul>
+          <li><a href="../admin_homepage/home_page.html" >Quản lý kỳ thi</a></li>
+          <li>
+            <a href="../qlsv/qlsv.html" >Quản lý sinh viên</a>
+          </li>
+          <li><a href="../thongke/thongke.html" >Thống kê</a></li>
+          <li><a href="../showresult/show_result.html">Xem kết quả</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <input type="text" id="searchInput" placeholder="Nhập mã sinh viên hoặc tên sinh viên...">
+        <button onclick="searchStudents()">Tìm kiếm</button>
+        <table id="searchTable">
+            <thead>
+                <tr>
+                    <th>Mã sinh viên</th>
+                    <th>Tên sinh viên</th>
+                    <th>Xem chi tiết</th>
+                </tr>
+            </thead>
+            <tbody id="searchData">
+                <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+        </table>
+
+        <table id="examTable">
+            <thead>
+                <tr>
+                    <th>Tên kỳ thi</th>
+                    <th>Trạng thái</th>
+                    <th>Điểm số</th>
+                    <th>Thời gian</th>
+                    <th>Xem chi tiết</th>
+                </tr>
+            </thead>
+            <tbody id="examData">
+                <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+        </table>        
+    </div>
+    <script src="show_result.js"></script>
+</body>
+</html>

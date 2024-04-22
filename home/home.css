@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main {
+    display: flex;
+    height: 100vh; /* Sử dụng chiều cao của toàn bộ màn hình */
+}
+.left{
+    width: 30%;
+    height: 100%;
+}
+.right{
+    width: 70%;
+    height: 100%;
+    background-image: url('../image/home.jpg');
+    background-size: cover;
+}
+.logo{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.text{
+    padding-bottom: 20px;
+}
+.form{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+.button_top{
+    margin-bottom: 10px;
+    padding: 20px 0px 0px 0px;
+}
+.button_bottom{
+    margin-bottom: 20px;
+    padding: 10px 0px 20px 0px;
+}
+.sign_in{
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    border-radius: 16px;
+    background-color: red;
+    padding: 6px 0px 6px 0px;
+}
+a{
+    text-decoration: none;
+}
+.position{
+    margin: 48px 0px 24px;
+    text-align: center;
+}
+.name{
+    margin-bottom: 5px;
+}
+.language{
+    padding-top: 5px;
+    text-align: center;
+}
+.language_text{
+    color: #565656;
+    margin: 10px 0px 10px 15px;
+}
+.img{
+    height: 23.2px; 
+    width: 27.5px; 
+    vertical-align: middle;
+}
+a:hover p{
+    color: rgb(32, 29, 29);
+    font-weight: inherit; /* Chữ in đậm khi rê chuột vào */
+}
+p{
+    color: rgba(0, 0, 0, .45);
+}

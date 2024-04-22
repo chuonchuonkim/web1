@@ -1,0 +1,72 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exam-preview {
+    padding: 20px;
+  }
+  
+  .exam-info {
+    margin-bottom: 20px;
+  }
+  
+  .exam-info h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .exam-info p {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .question-list {
+    list-style: none;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .question p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .answers {
+    list-style: none;
+  }
+  
+  .answer-item {
+    margin-bottom: 5px;
+  }
+  
+  .correct-answer {
+    color: #008000;
+  }
+  

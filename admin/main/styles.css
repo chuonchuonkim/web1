@@ -1,0 +1,298 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #b92929, #fa6d6d);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;
+  }
+
+  header:hover {
+    background: linear-gradient(to right, #fa6d6d, #b92929);
+  }
+  
+  header img {
+    width: 40px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  header i {
+    font-size: 20px;
+  }
+  
+  .nav-menu {
+    background-color: #ddd;
+    width: 200px;
+    padding: 20px;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #ad171c;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu ul li a:hover {
+    background-color: #ccc;
+  }
+  
+  .content {
+    margin-top: 60px;
+    margin-left: 240px;
+    padding: 20px;
+  }
+  
+  #examDescription {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #examEndDate {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #manageExamContent {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #manageExamContent h2 {
+    color: #ad171c;
+    margin-bottom: 15px;
+  }
+  
+  #manageExamContent form {
+    margin-bottom: 20px;
+  }
+  
+  #manageExamContent form label {
+    font-weight: bold;
+  }
+  
+  #manageExamContent form input[type="text"],
+  #manageExamContent form textarea,
+  #manageExamContent form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #manageExamContent form button {
+    padding: 10px 20px;
+    background-color: #ad171c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  #manageExamContent form button:hover {
+    background-color: #8c1115;
+  }
+  
+  #manageExamContent input[type="file"] {
+    margin-right: 10px;
+  }
+  
+  #manageExamContent input[type="file"],
+  #manageExamContent button[type="submit"] {
+    background-color: #ad171c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #manageExamContent input[type="file"]:hover,
+  #manageExamContent button[type="submit"]:hover {
+    background-color: #8c1115;
+  }
+  
+  #searchInput {
+    padding: 8px 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  #studentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  #studentTable th,
+  #studentTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #studentTable th {
+    background-color: #f2f2f2;
+  }
+  
+  #studentTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #studentTable tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .form-container {
+    display: none;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-container input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-container input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .form-cancel-btn {
+    background-color: #f44336;
+  }
+  
+  .form-cancel-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Định dạng nút button trong phần quản lý sinh viên */
+  #manageStudentsContent button {
+    background-color: #ad171c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #manageStudentsContent button:hover {
+    background-color: #9c1418;
+  }
+  
+  /* Định dạng nút submit */
+  #manageStudentsContent input[type="submit"] {
+    background-color: #ad171c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Định dạng nút submit khi di chuột vào */
+  #manageStudentsContent input[type="submit"]:hover {
+    background-color: #9c1418;
+  }
+  /* CSS cho trang thống kê */
+#statisticsTable {
+    margin-bottom: 20px;
+  }
+  
+  #filterOptions {
+    margin-bottom: 20px;
+  }
+  
+  #statisticsTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #statisticsTable th, #statisticsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #statisticsTable th {
+    background-color: #f2f2f2;
+  }
+  
+  #statisticsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #statisticsTable tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  

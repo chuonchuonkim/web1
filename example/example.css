@@ -1,0 +1,35 @@
+@media print {
+    .print-button {
+        display: none;
+    }
+}
+
+#print-button {
+    margin-left: 35%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #bb3737;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b57575;
+}
+
+@media print {
+    .header {
+        align-self: center;
+        background-color: #bb3737;
+    }
+}
+
+@media print{
+    #header {
+        display: none;
+    }
+}

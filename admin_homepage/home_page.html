@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="icon" href="../image/logo_ptit.png" type="image/x-icon">
+    <link rel="stylesheet" href="home_page.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <a href="home_page.html"><img src="../image/logo_ptit.png" alt="Your Logo" /></a>
+        <i class="fas fa-user"></i>
+    </header>
+    <nav class="nav-menu">
+        <ul>
+        <li><a href="home_page.html" >Quản lý kỳ thi</a></li>
+        <li>
+        <a href="../qlsv/qlsv.html" >Quản lý sinh viên</a>
+        </li>
+        <li><a href="../thongke/thongke.html" >Thống kê</a></li>
+        <li><a href="../showresult/show_result.html">Xem kết quả</a></li>
+        </ul>
+    </nav>
+    <div class="bottom">
+        <div class="right">
+            <div class="exam">
+                <h3>Danh sách kỳ thi</h3>
+
+                <input type="text" class="search" id="searchInput" placeholder="Tìm kiếm ">
+                <select class="search" id="filterSelect" onchange="filterExams()">
+                    <option value="all">Tất cả trạng thái</option>
+                    <option value="free-access">Tự do</option>
+                    <option value="time-bound">Theo lịch</option>
+                </select>
+                <div id="exams-list">
+                    <a href="../exam/exam.html" class="exam1">
+                        <div class="exam-item free-access">
+                            <p>Luyện tập</p>
+                        </div>
+                    </a>
+                    <a href="../exam/exam.html" class="exam1">
+                        <div class="exam-item time-bound">
+                            <p>Giữa kỳ</p>
+                        </div>
+                    </a>
+                    <a href="../exam/exam.html" class="exam1">
+                        <div class="exam-item time-bound">
+                            <p>Cuối kỳ</p>
+                        </div>
+                    </a>
+                    <a href="../exam/exam.html" class="exam1">
+                        <div class="exam-item time-bound">
+                            <p>Thi cuối kỳ</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="../admin/main/main.html"><button>Thêm</button></a>
+    </div>
+    <script src="home_page.js"></script>
+</body>
+</html>
